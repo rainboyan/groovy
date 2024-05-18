@@ -44,7 +44,9 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: ${{ matrix.java }}
-      - uses: gradle/gradle-build-action@v2
+      - uses: gradle/actions/setup-gradle@v3
+      - name: Bootstrap Gradle
+        run: gradle -p bootstrap
       - name: env
         run: env
 
