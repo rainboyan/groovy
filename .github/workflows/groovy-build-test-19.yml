@@ -39,9 +39,7 @@ jobs:
             19
             17
           check-latest: true
-      - uses: gradle/actions/setup-gradle@v3
-      - name: Bootstrap Gradle
-        run: gradle -p bootstrap
+      - uses: gradle/gradle-build-action@v2
       - name: Test with Gradle
         run: ./gradlew test -Ptarget.java.home=${{ env.JAVA_HOME_19_X64 }}
         timeout-minutes: 60

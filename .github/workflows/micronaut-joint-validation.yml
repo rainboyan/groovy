@@ -34,9 +34,6 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 17
-      - uses: gradle/actions/setup-gradle@v3
-      - name: Bootstrap Gradle
-        run: gradle -p bootstrap
       - name: env
         run: env
 
